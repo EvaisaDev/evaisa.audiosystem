@@ -68,10 +68,6 @@ FMOD_RESULT FMOD_Channel_Set3DMinMaxDistance(FMOD_CHANNEL *channel, float min, f
 local libname
 if ffi.os == "Windows" then
     libname = "fmod"
-elseif ffi.os == "OSX" then
-    libname = "libfmod.dylib"
-else
-    libname = "libfmod.so"
 end
 -- Load the FMOD dynamic library
 local fmod = ffi.load(libname)
